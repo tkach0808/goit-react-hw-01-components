@@ -1,0 +1,43 @@
+.transaction {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  margin-bottom: 60px;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', Sans-Serif;
+  font-size: 14px;
+  border-radius: 10px;
+  border-spacing: 0;
+  text-align: center;
+}
+.title {
+  background: rgba(39, 180, 223, 0.836);
+  color: white;
+  text-transform: uppercase;
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  border-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.data td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: grey;
+  text-transform: uppercase;
+}
+.data td:first-child {
+  text-align: left;
+  padding-left: 60px;
+  border-right: 1px solid rgba(204, 204, 204, 0.5);
+}
+.data td:last-child {
+  border-left: 1px solid rgba(204, 204, 204, 0.5);
+}
+.data:nth-child(odd) {
+  background: white;
+}
+.data:nth-child(even) {
+  background: rgba(185, 185, 185, 0.397);
+}
