@@ -1,12 +1,14 @@
 import React from 'react';
-import user from './profile/user.json';
-import Profile from './profile/profile';
-import statisticalData from './uploadstats/statistical-data.json';
-import Statistics from './uploadstats/uploadstats';
-import friends from './friendlist/friends.json';
-import FriendList from './friendlist/friendlist';
-import transactions from './transactionhistory/transactions.json';
-import TransactionHistory from './transactionhistory/transactionhistory';
+import Profile from './Profile';
+import Statistics from './Statistics';
+import FriendList from './Friendlist';
+import TransactionHistory from './Transactionhistory';
+
+import user from '../data/user.json';
+import statisticalData from '../data/statistical-data.json';
+import friends from '../data/friends.json';
+import transactions from '../data/transactions.json';
+
 export default function App() {
   return (
     <>
