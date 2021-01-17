@@ -3,7 +3,6 @@ import Tbody from './Tbody';
 import s from './Transactionhistory.module.css';
 
 function TransactionHistory({ items }) {
-  console.log(items);
   return (
     <table className={s.transaction}>
       <thead>
