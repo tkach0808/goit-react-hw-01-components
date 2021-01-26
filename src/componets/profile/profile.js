@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import s from './Profile.module.css';
-import Stats from './Stats';
+import Stats from './Stats/Stats';
 
 function Profile({ name, tag, location, avatar, stats }) {
+  const { followers, views, likes } = stats;
   return (
     <div className={s.profileCard}>
       <div className={s.description}>
@@ -14,7 +15,7 @@ function Profile({ name, tag, location, avatar, stats }) {
         <p className={s.text}>{location}</p>
       </div>
 
-      <Stats {...stats} />
+      <Stats followers={followers} views={views} likes={likes} />
     </div>
   );
 }
@@ -34,6 +35,6 @@ Profile.propTypes = {
     followers: PropTypes.number.isRequired,
     views: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,
-  }),
+  }).isRequired,
 };
 export default Profile;

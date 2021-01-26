@@ -1,9 +1,9 @@
 import React from 'react';
-import Tbody from './Tbody';
+import PropTypes from 'prop-types';
+import Tbody from './Tbody/Tbody';
 import s from './Transactionhistory.module.css';
 
 function TransactionHistory({ items }) {
-  console.log(items);
   return (
     <table className={s.transaction}>
       <thead>
@@ -18,4 +18,14 @@ function TransactionHistory({ items }) {
   );
 }
 
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    }),
+  ),
+};
 export default TransactionHistory;

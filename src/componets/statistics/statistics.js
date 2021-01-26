@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StatList from './Items';
+import StatList from './StatList/StatList';
 import s from './Statistics.module.css';
 
 function Statistics({ title, stats }) {
@@ -23,7 +23,7 @@ Statistics.propTypes = {
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
     }),
-  ),
+  ).isRequired,
 };
 
 export default Statistics;
