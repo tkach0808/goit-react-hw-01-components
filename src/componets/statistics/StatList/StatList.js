@@ -1,6 +1,8 @@
 import React from 'react';
-import s from '../Statistics.module.css';
+import PropTypes from 'prop-types';
+
 import ListItem from '../ListItem/ListItem';
+import s from '../Statistics.module.css';
 
 const StatList = ({ items }) => {
   if (items.length === 0) return null;
@@ -18,4 +20,13 @@ const StatList = ({ items }) => {
   );
 };
 
+StatList.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    }),
+  ).isRequired,
+};
 export default StatList;
